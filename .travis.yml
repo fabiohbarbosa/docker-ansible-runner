@@ -5,11 +5,8 @@ language: python
 services:
   - docker
 
-jobs:
-  include:
-    - stage: test
-      script:
-      - bash test.sh
+script:
+  - bash test.sh
 
 after_success:
   - generate.py
