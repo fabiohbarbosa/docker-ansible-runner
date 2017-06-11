@@ -19,12 +19,15 @@ def create_docker_file( base, tag ):
 def docker_build( tag, build_file ):
   image_name='ansible-runner'
   image_name_tag=image_name + ':' + tag
-  os.system('docker build -t ' + image_name_tag + ' -f ' + build_file + ' .')
+  exit_code = os.system('docker build -t ' + image_name_tag + ' -f ' + build_file + ' .')
+  if (exit_code != 0):
+    sys.exit(1)
   return image_name_tag
 
 def docker_push(image_name_tag):
-  os.system('docker push '+image_name_tag)
-  sys.exit(1)
+  exit_code = os.system('docker push '+image_name_tag)
+  if (exit_code != 0):
+    sys.exit(1)
 
 #--- starter
 distros = os.listdir(path)

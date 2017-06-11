@@ -4,12 +4,12 @@ docker_test=Dockerfile_test
 image_name=ansible-runner-test
 
 check_status() {
-    if [[ $1 != 0 ]]; then
-      echo
-      echo $2
-      rm -rf  ${docker_test}
-      exit $1
-    fi
+  if [[ $1 != 0 ]]; then
+    echo
+    echo $2
+    rm -rf  ${docker_test}
+    exit $1
+  fi
 }
 
 cp -a assets/Dockerfile ${docker_test}
