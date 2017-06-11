@@ -7,4 +7,4 @@ Ansible Docker Runner
 Used to test Ansible **playbooks** and **roles**.
 
 ## How to use
-Map your ansible playbook or role folder into **/volume**
+Map your ansible playbook or role folder into **/volume** and pass command to container
