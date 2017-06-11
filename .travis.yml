@@ -8,8 +8,15 @@ services:
 script:
   - bash test.sh
 
-after_success:
-  - python generate.py
+jobs:
+  include:
+    - stage: test
+      script:
+      - bash test.sh
+
+    - stage: deploy
+      script:
+      - python generate.py
 
 notifications:
   email: true
