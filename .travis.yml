@@ -5,18 +5,12 @@ language: python
 services:
   - docker
 
+before_script:
+  - pip install pyyaml
+
 script:
   - bash test.sh
-
-jobs:
-  include:
-    - stage: test
-      script:
-      - bash test.sh
-
-    - stage: deploy
-      script:
-      - python generate.py
+  - python generate.py
 
 notifications:
   email: true
