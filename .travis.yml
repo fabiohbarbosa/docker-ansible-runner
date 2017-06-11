@@ -11,10 +11,8 @@ jobs:
       script:
       - bash test.sh
 
-    - stage: deploy
-      script:
-      - generate.py
+after_success:
+  - generate.py
 
 notifications:
-  email: false
-  webhooks: https://galaxy.ansible.com/api/v1/notifications/
+  email: true
