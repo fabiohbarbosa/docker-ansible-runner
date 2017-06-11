@@ -7,7 +7,7 @@ services:
 
 before_script:
   - pip install pyyaml
-  # - docker login -u $docker_user -p $docker_password
+  - docker login -u $docker_user -p $docker_password
 
 script:
   - bash test.sh
