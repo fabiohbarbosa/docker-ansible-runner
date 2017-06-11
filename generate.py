@@ -17,7 +17,7 @@ def create_docker_file( base, tag ):
   return build_file
 
 def docker_build( tag, build_file ):
-  image_name='ansible-runner'
+  image_name='fabiohbarbosa/ansible-runner'
   image_name_tag=image_name + ':' + tag
   exit_code = os.system('docker build -t ' + image_name_tag + ' -f ' + build_file + ' .')
   if (exit_code != 0):
@@ -30,19 +30,6 @@ def docker_push(image_name_tag):
     sys.exit(1)
 
 #--- starter
-
-print '#######################################'
-print '#######################################'
-print '#######################################'
-print '#######################################'
-os.environ.get('docker_login')
-print '#######################################'
-print '#######################################'
-print '#######################################'
-print '#######################################'
-
-sys.exit(1)
-
 distros = os.listdir(path)
 
 if not os.path.exists(build_folder):
