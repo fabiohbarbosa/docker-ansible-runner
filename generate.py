@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-import os, yaml, shutil
+import os, yaml, shutil, sys
 
 path='docker-images/'
 build_folder='.tmp'
@@ -24,6 +24,7 @@ def docker_build( tag, build_file ):
 
 def docker_push(image_name_tag):
   os.system('docker push '+image_name_tag)
+  sys.exit(1)
 
 #--- starter
 distros = os.listdir(path)
