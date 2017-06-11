@@ -25,6 +25,15 @@ def docker_build( tag, build_file ):
   return image_name_tag
 
 def docker_push(image_name_tag):
+  print '#######################################'
+  print '#######################################'
+  print '#######################################'
+  print '#######################################'
+  print os.environ['docker_login']
+  print '#######################################'
+  print '#######################################'
+  print '#######################################'
+  print '#######################################'
   exit_code = os.system('docker push '+image_name_tag)
   if (exit_code != 0):
     sys.exit(1)

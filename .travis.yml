@@ -13,5 +13,8 @@ script:
   - bash test.sh
   - python generate.py
 
+after_script:
+  - docker logout
+
 notifications:
   email: true
