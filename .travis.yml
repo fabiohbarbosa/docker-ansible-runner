@@ -9,7 +9,7 @@ script:
   - bash test.sh
 
 after_success:
-  - generate.py
+  - python generate.py
 
 notifications:
   email: true
