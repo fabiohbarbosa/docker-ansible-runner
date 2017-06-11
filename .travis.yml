@@ -1,0 +1,20 @@
+---
+sudo: required
+
+language: python
+services:
+  - docker
+
+jobs:
+  include:
+    - stage: test
+      script:
+      - bash test.sh
+
+    - stage: deploy
+      script:
+      - generate.py
+
+notifications:
+  email: false
+  webhooks: https://galaxy.ansible.com/api/v1/notifications/

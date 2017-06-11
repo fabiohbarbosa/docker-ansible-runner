@@ -1,0 +1,11 @@
+sarah:
+  base: fabiohbarbosa/linux-mint:18
+  tag: mint-18-sarah
+
+serena:
+  base: fabiohbarbosa/linux-mint:18.1
+  tag: mint-18.1-serena
+
+sonya:
+  base: fabiohbarbosa/linux-mint:18.2
+  tag: mint-18.2-sonya

@@ -1,0 +1,11 @@
+zesty:
+  base: ubuntu:17.04
+  tag: ubuntu-17.04-zesty
+
+yakkety:
+  base: ubuntu:16.10
+  tag: ubuntu-16.10-yakkety
+
+xenial:
+  base: ubuntu:16.04
+  tag: ubuntu-16.10-xenial
