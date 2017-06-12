@@ -4,8 +4,11 @@ USER root
 
 ENV DEBIAN_FRONTEND noninteractive
 
-RUN apt-get update -qq
-RUN apt-get install sudo git ansible -y
+RUN apt-get update -qq && \
+    apt-get install sudo git python-software-properties software-properties-common -y && \
+    apt-add-repository ppa:ansible/ansible && \
+    apt-get update -qq && \
+    apt-get install ansible -y
 
 ENV USER runner
 ENV FOLDER /runner
