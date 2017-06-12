@@ -1,11 +1,27 @@
-sarah:
-  base: fabiohbarbosa/linux-mint:18
-  tag: mint-18-sarah
+sonya:
+  base: fabiohbarbosa/linux-mint:18.2
+  tag: mint-18.2-sonya
 
 serena:
   base: fabiohbarbosa/linux-mint:18.1
   tag: mint-18.1-serena
 
-sonya:
-  base: fabiohbarbosa/linux-mint:18.2
-  tag: mint-18.2-sonya
+sarah:
+  base: fabiohbarbosa/linux-mint:18
+  tag: mint-18-sarah
+
+rosa:
+  base: fabiohbarbosa/linux-mint:17.3
+  tag: mint-17.3-rosa
+
+rafaela:
+  base: fabiohbarbosa/linux-mint:17.2
+  tag: mint-17.2-rafaela
+
+rebecca:
+  base: fabiohbarbosa/linux-mint:17.1
+  tag: mint-17.1-rebecca
+
+qiana:
+  base: fabiohbarbosa/linux-mint:17
+  tag: mint-17-qiana

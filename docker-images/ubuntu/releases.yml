@@ -8,4 +8,56 @@ yakkety:
 
 xenial:
   base: ubuntu:16.04
-  tag: ubuntu-16.10-xenial
+  tag: ubuntu-16.04-xenial
+
+wily:
+  base: ubuntu:15.10
+  tag: ubuntu-15.10-wily
+
+vivid:
+  base: ubuntu:15.04
+  tag: ubuntu-15.04-vivid
+
+utopic:
+  base: ubuntu:14.10
+  tag: ubuntu-14.10-utopic
+
+trusty:
+  base: ubuntu:14.04
+  tag: ubuntu-14.04-trusty
+
+saucy:
+  base: ubuntu:13.10
+  tag: ubuntu-13.10-saucy
+
+raring:
+  base: ubuntu:13.04
+  tag: ubuntu-13.04-raring
+
+quantal:
+  base: ubuntu:12.10
+  tag: ubuntu-12.10-quantal
+
+precise:
+  base: ubuntu:12.04
+  tag: ubuntu-12.04-precise
+
+oneiric:
+  base: ubuntu:11.10
+  tag: ubuntu-11.10-oneiric
+
+oneiric:
+  base: ubuntu:11.10
+  tag: ubuntu-11.10-oneiric
+
+natty:
+  base: ubuntu:11.04
+  tag: ubuntu-11.04-natty
+
+maverick:
+  base: ubuntu:10.10
+  tag: ubuntu-10.10-maverick
+
+lucid:
+  base: ubuntu:10.04
+  tag: ubuntu-10.04-lucid
