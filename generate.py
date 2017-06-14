@@ -5,11 +5,11 @@ path='docker-images/'
 build_folder='.tmp'
 
 #--- functions
-def create_docker_file( base, tag ):
-  docker_base_file='assets/Dockerfile'
+def create_docker_file( base, tag, file ):
+  docker_file_base = 'assets/'+file
   build_file = build_folder+'/Dockerfile_'+tag
 
-  with open(docker_base_file, 'rt') as fin:
+  with open(docker_file_base, 'rt') as fin:
     with open(build_file, 'wt') as fout:
       for line in fin:
         fout.write(line.replace('__image__', base))
@@ -45,6 +45,6 @@ for distro in distros:
   stream = yaml.load(open(release_file, 'r'))
 
   for release, values in stream.items():
-    build_file = create_docker_file(values['base'], values['tag'])
+    build_file = create_docker_file(values['base'], values['tag'], values['file'])
     image_name_tag = docker_build(values['tag'], build_file)
     docker_push(image_name_tag)

@@ -1,0 +1,21 @@
+FROM __image__
+
+USER root
+
+ENV DEBIAN_FRONTEND noninteractive
+
+RUN apt-get update -qq && \
+    apt-get install sudo git python-software-properties software-properties-common -y >> /dev/null && \
+    apt-add-repository ppa:ansible/ansible && \
+    apt-get update -qq && \
+    apt-get install ansible >> /dev/null -y
+
+ENV USER runner
+ENV FOLDER /runner
+RUN /usr/sbin/groupadd $USER && \
+    /usr/sbin/useradd $USER -m -d $FOLDER -g $USER -s /bin/bash && \
+    echo $USER 'ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
+
+USER $USER
+
+WORKDIR $FOLDER

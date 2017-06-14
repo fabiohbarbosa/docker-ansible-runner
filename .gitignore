@@ -1,3 +1,4 @@
-.vscode/
+.ansible/
 .tmp/
+.vscode/
 Dockerfile_test
