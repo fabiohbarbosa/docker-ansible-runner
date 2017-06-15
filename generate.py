@@ -21,13 +21,38 @@ def docker_build( tag, build_file ):
   image_name_tag=image_name + ':' + tag
   exit_code = os.system('docker build -t ' + image_name_tag + ' -f ' + build_file + ' .')
   if (exit_code != 0):
+    print 'Error to build image: ' +image_name_tag
     sys.exit(1)
+  else:
+    print '#############################################################################'
+    print '#############################################################################'
+    print 'Success to build image "' + image_name_tag +' "'
+    print '#############################################################################'
+    print '#############################################################################'
   return image_name_tag
 
 def docker_push(image_name_tag):
   exit_code = os.system('docker push '+image_name_tag)
   if (exit_code != 0):
+    print 'Error to push image: ' +image_name_tag
     sys.exit(1)
+  else:
+    print '#############################################################################'
+    print '#############################################################################'
+    print 'Success to push image "' + image_name_tag +' "'
+    print '#############################################################################'
+    print '#############################################################################'
+
+def build(items):
+  tags = []
+  for release, values in items:
+    build_file = create_docker_file(values['base'], values['tag'], values['file'])
+    tags.append(docker_build(values['tag'], build_file))
+  return tags
+
+def push(tags):
+  for tag in tags:
+    docker_push(tag)
 
 #--- starter
 distros = os.listdir(path)
@@ -44,7 +69,5 @@ for distro in distros:
 
   stream = yaml.load(open(release_file, 'r'))
 
-  for release, values in stream.items():
-    build_file = create_docker_file(values['base'], values['tag'], values['file'])
-    image_name_tag = docker_build(values['tag'], build_file)
-    docker_push(image_name_tag)
+  push(build(stream.items()))
+sys.exit(0)
