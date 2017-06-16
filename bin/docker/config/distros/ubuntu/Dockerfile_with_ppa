@@ -10,6 +10,8 @@ RUN apt-get update -qq && \
     apt-get update -qq && \
     apt-get install ansible >> /dev/null -y
 
+RUN apt-get install python-apt -y >> /dev/null
+
 ENV USER runner
 ENV FOLDER /runner
 RUN /usr/sbin/groupadd $USER && \
