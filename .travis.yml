@@ -6,14 +6,26 @@ services:
   - docker
 
 before_script:
-  - pip install pyyaml
+  - pip install -r requirements.txt --user $USER
   - docker login -u $docker_user -p $docker_password
 
-script:
-  - python generate.py
+jobs:
+  include:
+    - stage: tests
+      script:
+      - bash test.sh
+
+    - stage: deploy
+      script:
+      - cd bin && python main.py
 
 after_script:
   - docker logout
 
 notifications:
   email: true
+
+
+
+
+

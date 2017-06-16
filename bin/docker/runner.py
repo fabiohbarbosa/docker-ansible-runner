@@ -1,6 +1,7 @@
 import os
 class DockerRunner(object):
-  def __init__(self, docker_file, image_name, tag):
+  def __init__(self, build_folder, docker_file, image_name, tag):
+    self.build_folder = build_folder
     self.docker_file = docker_file
     self.image_name = image_name
     self.tag = tag
@@ -8,9 +9,9 @@ class DockerRunner(object):
 
   def build(self):
     repository = self.__repository()
-    exit_code = os.system('docker build -t ' + repository + ' -f ' + self.docker_file + ' .')
+    exit_code = os.system('cd ' + self.build_folder + ' && docker build -t ' + repository + ' -f ' + self.docker_file + ' .')
     if (exit_code != 0):
-      raise Exception
+      raise Exception('Error to build docker file for ' + self.docker_file)
     self.is_builded = bool(True)
 
 

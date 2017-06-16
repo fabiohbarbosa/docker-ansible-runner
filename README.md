@@ -32,5 +32,5 @@ services:
 ## Development
 ## Install dependencies
 ```
-pip install -r requirements.txt --user username
+pip install -r requirements.txt --user $USER
 ```

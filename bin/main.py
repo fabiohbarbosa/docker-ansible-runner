@@ -1,9 +1,11 @@
 #!/usr/bin/env python
-import os
+import os, sys
 from docker import DockerReleaseGenerator, DockerRunner
 
-# print os.path.realpath('./')
-# print os.path.normpath('.')
-
 releases = DockerReleaseGenerator().generate()
-print releases
+for r in releases:
+  runner = DockerRunner(r.build_folder, r.generated_file, r.image_name, r.tag)
+  runner.build()
+
+for r in releases:
+  runner.push()
