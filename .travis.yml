@@ -6,7 +6,7 @@ services:
   - docker
 
 before_script:
-  - pip install -r requirements.txt --user $USER
+  - pip install -r requirements.txt
   - docker login -u $docker_user -p $docker_password
 
 jobs:
