@@ -1,34 +1,34 @@
 sonya:
   base: fabiohbarbosa/linux-mint:18.2
   tag: mint-18.2-sonya
-  file: Dockerfile-ubuntu_without_ppa
+  file: Dockerfile_without_ppa
 
 serena:
   base: fabiohbarbosa/linux-mint:18.1
   tag: mint-18.1-serena
-  file: Dockerfile-ubuntu_without_ppa
+  file: Dockerfile_without_ppa
 
 sarah:
   base: fabiohbarbosa/linux-mint:18
   tag: mint-18-sarah
-  file: Dockerfile-ubuntu_without_ppa
+  file: Dockerfile_without_ppa
 
 rosa:
   base: fabiohbarbosa/linux-mint:17.3
   tag: mint-17.3-rosa
-  file: Dockerfile-ubuntu_without_ppa
+  file: Dockerfile_without_ppa
 
 rafaela:
   base: fabiohbarbosa/linux-mint:17.2
   tag: mint-17.2-rafaela
-  file: Dockerfile-ubuntu_without_ppa
+  file: Dockerfile_without_ppa
 
 rebecca:
   base: fabiohbarbosa/linux-mint:17.1
   tag: mint-17.1-rebecca
-  file: Dockerfile-ubuntu_without_ppa
+  file: Dockerfile_without_ppa
 
 qiana:
   base: fabiohbarbosa/linux-mint:17
   tag: mint-17-qiana
-  file: Dockerfile-ubuntu_without_ppa
+  file: Dockerfile_without_ppa

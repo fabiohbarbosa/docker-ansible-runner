@@ -28,3 +28,9 @@ services:
     volumes:
       - ./:/runner
 ```
+
+## Development
+## Install dependencies
+```
+pip install -r requirements.txt --user username
+```

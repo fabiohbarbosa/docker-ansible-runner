@@ -63,11 +63,13 @@ else:
   shutil.rmtree(build_folder)
   os.makedirs(build_folder)
 
+alltags = []
 for distro in distros:
   distro_path = path+distro
   release_file = distro_path + '/releases.yml'
 
   stream = yaml.load(open(release_file, 'r'))
+  alltags = alltags + build(stream.items())
 
-  push(build(stream.items()))
+push(alltag)
 sys.exit(0)
