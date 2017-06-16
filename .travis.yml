@@ -5,8 +5,10 @@ language: python
 services:
   - docker
 
-before_script:
+install:
   - pip install -r requirements.txt
+
+before_script:
   - docker login -u $docker_user -p $docker_password
 
 jobs:
