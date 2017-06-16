@@ -28,3 +28,19 @@ services:
     volumes:
       - ./:/runner
 ```
+
+## Development
+## Install dependencies
+```
+pip install -r requirements.txt --user $USER
+```
+
+## Run tests
+```
+./test.sh
+```
+
+## Build and push docker images
+```
+cd bin && python main.py
+```

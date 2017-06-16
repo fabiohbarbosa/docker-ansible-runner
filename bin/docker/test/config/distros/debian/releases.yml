@@ -1,0 +1,9 @@
+jessie:
+  base: debian:jessie-slim
+  tag: debian-jessie
+  base_file: Dockerfile_correct
+
+wheezy:
+  base: debian:wheezy-slim
+  tag: debian-wheezy
+  base_file: Dockerfile_correct

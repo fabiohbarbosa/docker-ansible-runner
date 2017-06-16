@@ -1,4 +1,4 @@
 .ansible/
 .tmp/
 .vscode/
-Dockerfile_test
+**/*.pyc

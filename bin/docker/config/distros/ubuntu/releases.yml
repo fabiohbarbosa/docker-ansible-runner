@@ -1,34 +1,34 @@
 zesty:
   base: ubuntu:17.04
   tag: ubuntu-17.04-zesty
-  file: Dockerfile-ubuntu_without_ppa
+  base_file: Dockerfile_without_ppa
 
 yakkety:
   base: ubuntu:16.10
   tag: ubuntu-16.10-yakkety
-  file: Dockerfile-ubuntu_with_ppa
+  base_file: Dockerfile_with_ppa
 
 xenial:
   base: ubuntu:16.04
   tag: ubuntu-16.04-xenial
-  file: Dockerfile-ubuntu_with_ppa
+  base_file: Dockerfile_with_ppa
 
 wily:
   base: ubuntu:15.10
   tag: ubuntu-15.10-wily
-  file: Dockerfile-ubuntu_with_ppa
+  base_file: Dockerfile_with_ppa
 
 vivid:
   base: ubuntu:15.04
   tag: ubuntu-15.04-vivid
-  file: Dockerfile-ubuntu_with_ppa
+  base_file: Dockerfile_with_ppa
 
 trusty:
   base: ubuntu:14.04
   tag: ubuntu-14.04-trusty
-  file: Dockerfile-ubuntu_with_ppa
+  base_file: Dockerfile_with_ppa
 
 precise:
   base: ubuntu:12.04
   tag: ubuntu-12.04-precise
-  file: Dockerfile-ubuntu_with_ppa
+  base_file: Dockerfile_with_ppa
