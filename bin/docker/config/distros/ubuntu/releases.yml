@@ -14,7 +14,7 @@ xenial:
   base_file: Dockerfile_with_ppa
 
 wily:
-  base: ubuntu:15.a
+  base: ubuntu:15.10
   tag: ubuntu-15.10-wily
   base_file: Dockerfile_with_ppa
 
