@@ -1,34 +1,34 @@
 sonya:
   base: fabiohbarbosa/linux-mint:18.2
   tag: mint-18.2-sonya
-  base_file: Dockerfile
+  base_file: Dockerfile_xenial
 
 serena:
   base: fabiohbarbosa/linux-mint:18.1
   tag: mint-18.1-serena
-  base_file: Dockerfile
+  base_file: Dockerfile_xenial
 
 sarah:
   base: fabiohbarbosa/linux-mint:18
   tag: mint-18-sarah
-  base_file: Dockerfile
+  base_file: Dockerfile_xenial
 
 rosa:
   base: fabiohbarbosa/linux-mint:17.3
   tag: mint-17.3-rosa
-  base_file: Dockerfile
+  base_file: Dockerfile_trusty
 
 rafaela:
   base: fabiohbarbosa/linux-mint:17.2
   tag: mint-17.2-rafaela
-  base_file: Dockerfile
+  base_file: Dockerfile_trusty
 
 rebecca:
   base: fabiohbarbosa/linux-mint:17.1
   tag: mint-17.1-rebecca
-  base_file: Dockerfile
+  base_file: Dockerfile_trusty
 
 qiana:
   base: fabiohbarbosa/linux-mint:17
   tag: mint-17-qiana
-  base_file: Dockerfile
+  base_file: Dockerfile_trusty
