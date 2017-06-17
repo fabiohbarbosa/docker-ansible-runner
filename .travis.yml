@@ -20,6 +20,9 @@ jobs:
     - stage: deploy
       script:
       - cd bin && python main.py
+      branches:
+        only:
+        - master
 
 after_script:
   - docker logout

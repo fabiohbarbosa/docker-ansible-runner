@@ -8,7 +8,9 @@ RUN apt-get update -qq && \
     apt-get install sudo git python-software-properties software-properties-common -y >> /dev/null && \
     apt-add-repository ppa:ansible/ansible && \
     apt-get update -qq && \
-    apt-get install ansible >> /dev/null -y
+    apt-get install ansible python-apt -y >> /dev/null
+
+RUN apt-get install python-apt -y >> /dev/null
 
 ENV USER runner
 ENV FOLDER /runner

@@ -26,8 +26,9 @@ class DockerReleaseGenerator(object):
     for distro in distros:
       release_file = self.__path_config + distro + '/releases.yml'
       stream = yaml.load(open(release_file, 'r'))
-      for release, values in stream.items():
-        releases.append(Release(distro, values["base"], values["tag"], values["base_file"], self.__path_config, self.__build_folder))
+      if stream:
+        for release, values in stream.items():
+          releases.append(Release(distro, values["base"], values["tag"], values["base_file"], self.__path_config, self.__build_folder))
 
     return releases
 

@@ -4,8 +4,11 @@ USER root
 
 ENV DEBIAN_FRONTEND noninteractive
 
+RUN echo deb http://ppa.launchpad.net/ansible/ansible/ubuntu xenial main >> /etc/apt/sources.list
+RUN apt-key adv --recv-key --keyserver keyserver.ubuntu.com 6125E2A8C77F2818FB7BD15B93C4A3FD7BB9C367
+
 RUN apt-get update -qq && \
-    apt-get install sudo git ansible -y >> /dev/null
+    apt-get install sudo git ansible python-apt -y >> /dev/null
 
 ENV USER runner
 ENV FOLDER /runner
